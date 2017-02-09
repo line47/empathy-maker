@@ -1,15 +1,67 @@
 var names = [
-  'Alex',
-  'Andy',
-  'Ariel',
+// African
+  'Ajani',
+  'Sha-Mia',
+// Arabic
+  'Hasan',
+  'Salim',
+  'Cala',
+  'Nima',
+// Italian
+  'Angelo',
+  'Carlo',
+  'Maria',
+  'Rosa',
+// French
+  'Louis',
+  'Jean-Paul',
+  'Gabrielle',
+  'Yvette',
+// German
+  'Otto',
+  'Roger',
+  'Heidi',
+  'Emma',
+// Polish
+  'Bogdan',
+  'Jacek',
+  'Mirka',
+  'Krysta',
+// Russian
+  'Pavel',
+  'Oleg',
+  'Nadya',
+  'Tatiana',
+// English
+  'Arthur',
+  'Roland',
+  'Andie',
+  'Becky',
+// African
+  'Umi',
+  'Hamadi',
+  'Aisha',
+  'Taliba',
+// Spanish
+  'Diego',
+  'Julio',
   'Carmen',
-  'Charlie',
-  'Drew',
-  'Jesse',
-  'Jude',
-  'Micah',
-  'Sam',
-  'Sasha'
+  'Mariposa',
+// Asian
+  'Chang',
+  'Jin',
+  'Ming',
+  'Tam',
+// Hebrew
+  'Abe',
+  'Isaac',
+  'Naomi',
+  'Sophie',
+// Native American
+  'Achak',
+  'Moketavato',
+  'Chenoa',
+  'Halona',
 ];
 
 function makeDisability(options) {
@@ -25,6 +77,8 @@ var TOUCH = 'touch';
 var SEE = 'see';
 var HEAR = 'hear';
 var SPEAK = 'speak';
+var MIND = 'mind';
+
 
 var disabilities = [
   makeDisability({
