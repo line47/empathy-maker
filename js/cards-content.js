@@ -65,7 +65,7 @@ var names = [
 ];
 
 function makeDisability(options) {
-  options.img = 'img/' + options.id + '.png';
+  options.img = 'img/' + options.icon + '.png';
   // if (options.type !== TOUCH || options.type !== BLARG) {
   //   throw Exception('type ' + options.type + ' is not valid!');
   // }
@@ -73,13 +73,16 @@ function makeDisability(options) {
 }
 
 // Physical disability senses/categories
+// These should be mapped to how to serve someone with this type of disability
 var TOUCH = 'touch';
 var SEE = 'see';
 var HEAR = 'hear';
 var SPEAK = 'speak';
 var MIND = 'mind';
 
+
 // Emotional senses/categories
+// These should be mapped to how to server someone feeling these emotions
 var HAPPY = 'happy';
 var LOVING = 'loving';
 var INTERESTED = 'interested';
@@ -95,59 +98,113 @@ var AFRAID = 'afraid';
 var HURT = 'hurt';
 var SAD = 'sad';
 
+
+// These were quick adds to work out some styling
+var emotionalState = [
+'happy',
+'loving',
+'interested',
+'positive',
+'peaceful',
+'strong',
+'relaxed',
+'angry',
+'depressed',
+'confused',
+'helpless',
+'afraid',
+'hurt',
+'sad'
+];
+
 var disabilities = [
   makeDisability({
+    id: 'head-injury',
+    icon: 'mind',
+    type: MIND,
+    description: 'has a head injury'
+  }),
+  makeDisability({
+    id: 'reading-comprehension',
+    icon: 'mind',
+    type: MIND,
+    description: 'has a reading comprehension disability'
+  }),
+  makeDisability({
+    id: 'dyslexia',
+    icon: 'mind',
+    type: MIND,
+    description: 'is dyslexic'
+  }),
+  makeDisability({
     id: 'one-arm',
+    icon: 'hand',
     type: TOUCH,
     description: 'has one arm'
   }),
   makeDisability({
     id: 'arm-injury',
+    icon: 'hand',
     type: TOUCH,
     description: 'has an arm injury'
   }),
   makeDisability({
     id: 'holding-baby',
+    icon: 'hand',
     type: TOUCH,
     description: 'is holding a baby'
   }),
   makeDisability({
-    id: 'blind',
+    id: 'is-blind',
+    icon: 'eye',
     type: SEE,
     description: 'is blind'
   }),
   makeDisability({
-    id: 'cataracts',
+    id: 'has-cataracts',
+    icon: 'eye',
     type: SEE,
     description: 'has cataracts'
   }),
   makeDisability({
-    id: 'distracted-driver',
+    id: 'color-blind',
+    icon: 'eye',
     type: SEE,
-    description: 'is a distracted driver'
+    description: 'is color blind'
   }),
   makeDisability({
     id: 'deaf',
+    icon: 'ear',
     type: HEAR,
     description: 'is deaf'
   }),
   makeDisability({
     id: 'ear-infection',
+    icon: 'ear',
     type: HEAR,
     description: 'has an ear infection'
   }),
   makeDisability({
+    id: 'coast-guard-veteran',
+    icon: 'ear',
+    type: HEAR,
+    description: 'is a coast guard veteran'
+  }),
+  makeDisability({
     id: 'non-verbal',
+    icon: 'mouth',
     type: SPEAK,
     description: 'is non-verbal'
   }),
   makeDisability({
     id: 'laryngitis',
+    icon: 'mouth',
     type: SPEAK,
     description: 'has laryngitis'
   }),
   makeDisability({
     id: 'heavy-accent',
+    icon: 'mouth',
     type: SPEAK,
     description: 'has a heavy accent'
   })
@@ -158,7 +215,10 @@ var physicalContext = [
   'in the wilderness',
   'on a bus',
   'in a car',
-  'at the city center'
+  'at the city center',
+  'at a coffee shop',
+  'at the office',
+  'at the library'
 ];
 
 var colors = [
@@ -179,6 +239,8 @@ function newMessage() {
   message += disability.description; // Run getRandomItem twice
   message += ' ' + 'and is' + ' ';
   message += getRandomItem(physicalContext) + '.';
+    message += '<span class="emotions">' + 'Feeling: ' + ' ';
+  message += getRandomItem(emotionalState) + '</span>';
   return {
     html: message,
     disability: disability
