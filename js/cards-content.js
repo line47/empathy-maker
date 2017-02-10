@@ -81,6 +81,13 @@ var SPEAK = 'speak';
 var MIND = 'mind';
 
 
+// Serving disabilites
+// TOUCH
+  // Test by using your non dominant hand to control your mouse, type of horld your mobile device. Can you navigate easily? Where are the pain points?
+  // Test browsing with the keyboard. Can you get to every item on the page and complete all tasks with the keyboard?
+
+
+
 // Emotional senses/categories
 // These should be mapped to how to server someone feeling these emotions
 var HAPPY = 'happy';
