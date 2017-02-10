@@ -79,6 +79,21 @@ var HEAR = 'hear';
 var SPEAK = 'speak';
 var MIND = 'mind';
 
+// Emotional senses/categories
+var HAPPY = 'happy';
+var LOVING = 'loving';
+var INTERESTED = 'interested';
+var POSITIVE = 'positive';
+var PEACEFUL = 'peaceful';
+var STRONG = 'strong';
+var RELAXED = 'relaxed';
+var ANGRY = 'angry';
+var DEPRESSED = 'depressed';
+var CONFUSED = 'confused';
+var HELPLESS = 'helpless';
+var AFRAID = 'afraid';
+var HURT = 'hurt';
+var SAD = 'sad';
 
 var disabilities = [
   makeDisability({
@@ -147,12 +162,11 @@ var physicalContext = [
 ];
 
 var colors = [
-  '#F8BBCF',
-  '#C5C9E6',
-  '#B6E3EB',
-  '#DCECC8',
-  '#B5E4FA',
-  '#FBCBBD'
+  '#e1f3f8',
+  '#f9dede',
+  '#fff1d2',
+  '#e7f4e4',
+  '#dce4ef'
 ]
 
 function newMessage() {
